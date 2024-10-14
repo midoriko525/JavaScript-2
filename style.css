@@ -1,0 +1,38 @@
+.calculator {
+  /*電卓全体*/
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+#display {
+  /*液晶部分、idだから#を先頭につける*/
+  width: 100%;
+  height: 40px;
+  font-size: 24px;
+  text-align: right; /*テキストを右揃えにする*/
+  margin-bottom: 10px;
+}
+
+.buttons {
+  /*ボタン全体*/
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr; /*4列のレイアウト*/
+  gap: 10px;
+}
+
+.btn {
+  /*各ボタン*/
+  padding: 20px;
+  font-size: 25px;
+  border: none;
+  border-radius: 5px;
+  background-color: skyblue;
+  color: white;
+  cursor: pointer;
+}
+
+.btn:hover {
+  /*マウスカーソルを置くと*/
+  background-color: gray;
+}
