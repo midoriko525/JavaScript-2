@@ -22,7 +22,10 @@ function appendToDisplay(value) {
   if (value === "0" && display.value.length === 0) {
     return;
   }
-
+  //00ボタンで、00が連続入力出来ないようにする
+  if (value === "00" && (display.value === "" || lastChar === "0")) {
+    return;
+  }
   // 小数点の連続入力を防ぐ
   //最後に表示されているのが小数点の場合は新しく小数点を入力出来ないようにする
   if (value === "." && lastChar === ".") {
